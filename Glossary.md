@@ -23,8 +23,8 @@ files this way like so mv ~/Baseball/Pitchers/Randy Johnson.txt ~/Baseball/Pitch
 
 ```
 Consider the directory /home/webbsamu/Music/King Crimson/Bad Songs. We want to delete this directory. Since it's empty (obviously), we need to make sure
-our pwd is ~/Music/King Crimson, we can delete it with **rm Bad Songs**. If we wanted to delete a folder that had files in it, like ~/Music/Led Zepplin Ripoffs,
-we could use **rm -rf Led Zepplin Ripoffs**. -r indicates a recursive delete, and -f indicated that this would occur without confirmation. Once completed, your
+our pwd is ~/Music/King Crimson, we can delete it with rm Bad Songs. If we wanted to delete a folder that had files in it, like ~/Music/Led Zepplin Ripoffs,
+we could use rm -rf Led Zepplin Ripoffs. -r indicates a recursive delete, and -f indicated that this would occur without confirmation. Once completed, your
 file is deleted and you no longer have Greta Van Fleet's discography in your Music folder. 
 ```
 
