@@ -5,14 +5,12 @@
 
 **mv** - Move. Moves directories and files into new directories.
 
-'''
-
+```
 To move the best song of the 2010's to the folder \~/Music/Best Songs, you would use **mv \~/Music/AWOLNATION/Sail.mp3 \~/Music/Best Songs**. You can do this
 in combination with the best album of the 2010's like this **mv \~/Music/AWOLNATION/Sail.mp3 \~/Music/OMAM/My Head is an Animal \~/Music/Best Songs**. To move
 the individual songs from "My Head is an Animal" instead of the folder, you can use the syntax **\~/Music/OMAM/My Head is an Animal/\*.mp3** You also rename
 files this way like so **mv \~/Baseball/Pitchers/Randy Johnson.txt \~/Baseball/Pitchers/GOAT.txt**
-
-'''
+```
 
 **stat** - Statistics. Gives statistics about a file.
 
@@ -23,12 +21,12 @@ files this way like so **mv \~/Baseball/Pitchers/Randy Johnson.txt \~/Baseball/P
 - -r: Recursive removal. Will delete a directory and everything inside it.
 - -f: Force removal. Will delete a file without asking for confirmation.
 
-'''
+```
 Consider the directory /home/webbsamu/Music/King Crimson/Bad Songs. We want to delete this directory. Since it's empty (obviously), we need to make sure
 our pwd is ~/Music/King Crimson, we can delete it with **rm Bad Songs**. If we wanted to delete a folder that had files in it, like ~/Music/Led Zepplin Ripoffs,
 we could use **rm -rf Led Zepplin Ripoffs**. -r indicates a recursive delete, and -f indicated that this would occur without confirmation. Once completed, your
 file is deleted and you no longer have Greta Van Fleet's discography in your Music folder. 
-'''
+```
 
 **mkdir** - Make directory.
 
