@@ -6,10 +6,12 @@
 **mv** - Move. Moves directories and files into new directories.
 
 '''
+
 To move the best song of the 2010's to the folder \~/Music/Best Songs, you would use **mv \~/Music/AWOLNATION/Sail.mp3 \~/Music/Best Songs**. You can do this
 in combination with the best album of the 2010's like this **mv \~/Music/AWOLNATION/Sail.mp3 \~/Music/OMAM/My Head is an Animal \~/Music/Best Songs**. To move
 the individual songs from "My Head is an Animal" instead of the folder, you can use the syntax **\~/Music/OMAM/My Head is an Animal/\*.mp3** You also rename
 files this way like so **mv \~/Baseball/Pitchers/Randy Johnson.txt \~/Baseball/Pitchers/GOAT.txt**
+
 '''
 
 **stat** - Statistics. Gives statistics about a file.
