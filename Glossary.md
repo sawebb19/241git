@@ -41,13 +41,62 @@ file is deleted and you no longer have Greta Van Fleet's discography in your Mus
 - -d: No deference. Preserves links.
 - -p: Preserve. Preserves file attributes when possible.
 - -R: Recursive copy. Will copy a directory and everything in it.
-- -a: Archive. Combines functionality of -d/-p/-A
+- -a: Archive. Combines functionality of -d/-p/-A.
 
 
 **mount** - Mount. Shows all mount points. Will also mount folders passed to it.
 
-**umount** - Unmount. Unmounts folders passed to it
+**umount** - Unmount. Unmounts folders passed to it.
 
 **echo** - Echo. Prints what is passed to it.
 
-**chmod** - 
+**chmod** - Change mode. Changes user(s) permissions relating to a file passed to it according to the permissions passed to it.
+
+- Individual Permissions Formula: chmod abc
+
+	- a = User(s)per
+		- u: User. Permissions of the file's owner (me)
+		- g: Group. Member's of the file's group
+		- o: Others. Everyone else
+		- a: All. Everyone
+
+	- b = Application
+		- -: Remove. Remove given permissions
+		- +: Add. Add given permissions
+		- =: Set. Set permissions as given
+
+	- c = Permissions
+		- r: Read
+		- w: Write
+		- x: Execute
+
+- En Masse Permissions Formula: chmod abcdefghi
+
+	- Sets permissions for all groups *en masse*
+
+	- abc: User permissions
+	
+	- def: Group permissions
+
+	- ghi: Others' permissions
+
+- Octal En Masse Permissions Formula: cmhod ###
+
+	- Numbers range 0-7
+		- 0: No permissions
+		- 1: Read permissions
+		- 2: Write permissions
+		- 3: R+W permissions
+		- 4: Execute permissions
+		- 5: R+X permissions
+		- 6: W+X permissions
+		- 7: R+W+X permissions
+
+	- #1: Permissions for User
+	- #2: Permissions for Group
+	- #3: Permissions for Others
+	- ***NEVER GIVE 777 PERMISSIONS***
+
+
+
+
