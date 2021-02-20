@@ -179,3 +179,5 @@ rm -rf fullDir
 - -o ~ Prints operating system
 
 **dialog** - Dialog. Display dialog boxes from shell scripts
+
+GitHub SSH Key test commit
