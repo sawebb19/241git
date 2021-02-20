@@ -7,3 +7,5 @@ nothing you can do about it"
 
 
 https://github.com/sawebb19/241git.git
+
+CommitMachine.sh commits my repo for me :)
