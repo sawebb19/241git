@@ -3,13 +3,11 @@
 ## Contains functions, what they do, flags for them, and some other general notes.
 ***NOTE: May occasionally be missing the letter 'n'. My 'n' keyswitch is broken.***
 
-**mv** - Move. Moves directories and files into new directories.
+**mv** - Move. Moves directories and files into new directories. Can also be used to rename files/directories.
 
 ```
-To move the best song of the 2010's to the folder ~/Music/Best Songs, you would use mv ~/Music/AWOLNATION/Sail.mp3 ~/Music/Best Songs. You can do this
-in combination with the best album of the 2010's like this mv ~/Music/AWOLNATION/Sail.mp3 ~/Music/OMAM/My Head is an Animal ~/Music/Best Songs. To move
-the individual songs from "My Head is an Animal" instead of the folder, you can use the syntax ~/Music/OMAM/My Head is an Animal/*.mp3 You also rename
-files this way like so mv ~/Baseball/Pitchers/Randy Johnson.txt ~/Baseball/Pitchers/GOAT.txt
+mv ~/Desktop/The Glass Prison.flac ~/Music/Dream Theater/
+mv ~/Desktop/coolFile.txt ~/Desktop/superDuperCoolFile.txt
 ```
 
 **stat** - Statistics. Gives statistics about a file.
@@ -22,10 +20,10 @@ files this way like so mv ~/Baseball/Pitchers/Randy Johnson.txt ~/Baseball/Pitch
 - -f: Force removal. Will delete a file without asking for confirmation.
 
 ```
-Consider the directory /home/webbsamu/Music/King Crimson/Bad Songs. We want to delete this directory. Since it's empty (obviously), we need to make sure
-our pwd is ~/Music/King Crimson, we can delete it with rm Bad Songs. If we wanted to delete a folder that had files in it, like ~/Music/Led Zepplin Ripoffs,
-we could use rm -rf Led Zepplin Ripoffs. -r indicates a recursive delete, and -f indicated that this would occur without confirmation. Once completed, your
-file is deleted and you no longer have Greta Van Fleet's discography in your Music folder. 
+rm file.txt
+rm -f file2.txt
+rm -f emptyDir
+rm -rf fullDir 
 ```
 
 **mkdir** - Make directory.
@@ -72,12 +70,8 @@ file is deleted and you no longer have Greta Van Fleet's discography in your Mus
 
 - En Masse Permissions Formula: chmod abcdefghi
 
-	- Sets permissions for all groups *en masse*
-
 	- abc: User permissions
-	
 	- def: Group permissions
-
 	- ghi: Others' permissions
 
 - Octal En Masse Permissions Formula: cmhod ###
@@ -97,6 +91,91 @@ file is deleted and you no longer have Greta Van Fleet's discography in your Mus
 	- #3: Permissions for Others
 	- ***NEVER GIVE 777 PERMISSIONS***
 
+**ls** - List. Lists files and diretories in pwd.
 
+- -a ~ Lists hidden files
+- -l ~ Lists files in long form (includes permissions, owner, owner group, byte size, and timestamp)
+- --color ~ Colors list
+- -R ~ Recursively lists files
+- -S ~ Sorts by file size
+- -t ~ Sorts by time & date
+- -r ~ Lists files in reverse order
 
+**chown** - Change owner.
 
+`chown [user] [file]`
+
+**chgrp** - Change group.
+
+`chgrp [group] [file]`
+
+**ln** - Link. Creates  link.
+
+**find** - Find files.
+
+- -P ~ Never follow symbolic links (default)
+- -L ~ Follow symbolic links
+
+**df** - Disk Free. Shows how much space is filled on the disk
+
+- -h ~ Print sizes in powers of 1024
+- -H - Print sizes in powers of 1000
+
+**du** - Disk usage. Shows how much space is filled in a particular directory
+
+- -c ~ Produces grand total
+- -h ~ Makes it easier to read
+- --exclude=PATTERN ~ Excludes files that match PATTERN
+- -t=[-]SIZE ~ Excludes entries smaller than SIZE. Excludes entries larger than SIZE if `-` is entered before SIZE
+
+**more/less** - Displays the contents of a file.
+
+**head/tail** - Displays the first/last part of the file. Defaults to 10 lines.
+
+- -n=[-]NUM ~ Displays first/last NUM lines. Displays all but last/first NUM lines if `-` is entered before NUM
+
+**wc** - Word Count. Prints newlines/word/byte counts for each fole passed to it.
+
+- -c ~ Prints byte counts
+- -m ~ Prints character counts
+- -l ~ Prints newline counts
+- -w ~ Prints word counts
+
+**sort** - Sort. Sorts lines of text files
+
+- -f ~ Ignores case
+- -d ~ Consider olnly blanks and alphanumeric characters
+- -b ~ Ignore leading blanks
+- -n ~ Sort by number
+- -r ~ Reverse sort
+- --key=KEYDEF ~ Sort by a key defined by KEYDEF
+- --output=FILE ~ Output to a file defined by FILE
+
+**uniq** - Unique. Report or omit repeated lines adjacent.
+
+- -c ~ Counts number of occurences of each line.
+- -d ~ Only print the lines that have duplicates (opposite of -u)
+- -D ~ Only print the lines that have duplicates and all of its duplicates.
+- --all-reported ~ Same as -D but separates groups by a newline
+- --skip-fields=N ~ Skip N number of lines
+- -i ~ Ignore case
+- --skip-chars=N ~ Skips N number of chars each line
+- -u ~ Only print uniqe lines (opposite of -d)
+- --check-chars=N ~ Only compare the first N chars in each line only
+
+**wget/curl** - Both can download stuff from servers. Curl can do more and has more supported protocols. Idk enough to say tho
+
+**rlwrap** - Readline Wrap. Run commands with readline line editing.
+
+**uname** - Prints system information
+
+- -a ~ All following flags
+- -s ~ Prints kernel name
+- -r ~ Prints kernel release
+- -v ~ Prints kernel version
+- -m ~ Prints machine hardware name
+- -p ~ Prints processor type or "unknown" (Won't print during -a if unknown)
+- -i ~ Prints hardware platform (Won't print during -a if unknown)
+- -o ~ Prints operating system
+
+**dialog** - Dialog. Display dialog boxes from shell scripts
