@@ -180,7 +180,7 @@ rm -rf fullDir
 
 **dialog** - Dialog. Display dialog boxes from shell scripts
 
-**git** Git. Does git stuff.
+**git** - Git. Does git stuff.
 
 - git commit -m "[MESSAGE]" ~ Commits changes with message (removes need to enter Vim/Nano to make commit message)
 
