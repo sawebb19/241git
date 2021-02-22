@@ -1,12 +1,16 @@
 Samuel A. Webb
 
-"Life is this crazy, mystical thing, and sometimes you just go out like a buster, and there's
-nothing you can do about it"
+---
+
+> "Life is this crazy, mystical thing, and sometimes you just go out like a buster, and there's
+> nothing you can do about it"
 
 -Joseph Marquez
 
 
 https://github.com/sawebb19/241git.git
+
+## FILES
 
 **CommitMachine.sh** - Commits my 241git repo. Prompts user for commit comment, but might change to be an argument later. Also adds all files to commit. Might change with flag.
 
