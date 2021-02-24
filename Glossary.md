@@ -1,19 +1,21 @@
 # GLOSSARY
 
 **Contains functions, what they do, flags for them, and some other general notes.**
+
 ***NOTE: May occasionally be missing the letter 'n'. My 'n' keyswitch is broken.***
 
 **mv** - Move. Moves directories and files into new directories. Can also be used to rename files/directories.
-```
-mv ~/Desktop/The Glass Prison.flac ~/Music/Dream Theater/
-mv ~/Desktop/coolFile.txt ~/Desktop/superDuperCoolFile.txt
-```
+`mv PATH1 PATH2`
 
 **stat** - Statistics. Gives statistics about a file.
+`stat FILE`
 
 **touch** - Touch. Updates the timestamp of a file. Also creates a fie if given a non-existant filename.
+`touch FILE`
 
 **rm** - Remove. Removes a file.
+`rm [FLAGS] FILE`
+
 - -r ~ Recursive removal. Will delete a directory and everything inside it.
 - -f ~ Force removal. Will delete a file without asking for confirmation.
 
@@ -25,28 +27,41 @@ rm -rf fullDir
 ```
 
 **mkdir** - Make directory.
+`mkdir DIRNAME`
 
 **file** - File. Gives short synopsis of the kind of file that was passed to it.
+`file FILE`
 
 **cd** - Change directory. Changes present working directory to given directory. Use without input to take to home directory.
+`cd PATH`
 
 **pwd** - Present working directory. Returns filepath for directory you are currently in.
+`pwd`
 
 **cp** - Copy.
+`cp PATH1 PATH2`
+
 - -d ~ No deference. Preserves links.
 - -p ~ Preserve. Preserves file attributes when possible.
 - -R ~ Recursive copy. Will copy a directory and everything in it.
 - -a ~ Archive. Combines functionality of -d/-p/-A.
 
-
 **mount** - Mount. Shows all mount points. Will also mount folders passed to it.
+`mount[DIR]`
 
 **umount** - Unmount. Unmounts folders passed to it.
+`umount DIR`
 
 **echo** - Echo. Prints what is passed to it.
+`echo MESSAGE`
 
 **chmod** - Change mode. Changes user(s) permissions relating to a file passed to it according to the permissions passed to it.
-- ***NEVER GIVE RWX/777 PERMISSIONS TO EVERYONE***
+```
+chmod abc
+chmod abcdefghi
+chmod ###
+```
+
 - Individual Permissions Formula: chmod abc
 	- a = User(s)
 		- u ~ User. Permissions of the file's owner (me)
@@ -85,6 +100,8 @@ rm -rf fullDir
 	- #3 ~ Permissions for Others
 
 **ls** - List segments. Lists files and diretories in pwd.
+`ls [FLAGS]`
+
 - -a ~ Lists hidden files
 - -l ~ Lists files in long form (includes permissions, owner, owner group, byte size, and timestamp)
 - --color ~ Colors list
@@ -94,19 +111,19 @@ rm -rf fullDir
 - -r ~ Lists files in reverse order
 
 **chown** - Change owner.
-```
-chown [user] [file]
-```
+`chown [user] [file]`
 
 **chgrp** - Change group.
-```
-chgrp [group] [file]
-```
+`chgrp [group] [file]`
 
 **ln** - Link. Creates  link.
+`ln PATH NAME`
+
 - -s ~ Create soft link
 
 **find** - Find files.
+`file [FLAGS] [START_PATH] NAME`
+
 - -P ~ Never follow symbolic links (default)
 - -L ~ Follow symbolic links
 
@@ -121,7 +138,9 @@ chgrp [group] [file]
 - -t=[-]SIZE ~ Excludes entries smaller than SIZE. Excludes entries larger than SIZE if `-` is entered before SIZE
 
 **more/less** - Displays the contents of a file.
-
+- Use `/` to enter search mode
+	- `n` ~ Next occurence
+	- `N` ~ Previous occurence
 **head/tail** - Displays the first/last part of the file. Defaults to 10 lines.
 - -n=[-]NUM ~ Displays first/last NUM lines. Displays all but last/first NUM lines if `-` is entered before NUM
 
@@ -176,22 +195,22 @@ chgrp [group] [file]
 cat README.md
 
 > Samuel Webb
-> 
-> ---
-> 
-> "Life is..."
+
+---
+
+"Life is..."
 
 cat bashms.sh README.md
 
 > echo $1 | write $2
-> Samuel Webb
-> 
-> ---
-> 
-> "Life is..."
+Samuel Webb
+
+---
+
+"Life is..."
 ```
 
-**bat** - Bat. Cat but with some extra features. See above for examples.
+**bat** - Bat. Cat but with some extra features. See above for examples. Not in EOS.
 
 **tar** - Tape Archive. Manipulates tar files.
 - -c ~ Creates tar file
@@ -201,7 +220,7 @@ cat bashms.sh README.md
 - -t ~ List files in archive
 - -x ~ Extract from archive
 - -v ~ Verbosely list files processed
-- -f ~ Use archive file
+- -f ~ Use archive file to combine files instead of tape archive
 
 ```
 tar -cf archive.tar foo bar
@@ -213,3 +232,28 @@ List all files in archive.tar verbosely.
 tar -xf archive.tar
 Extract all files from archive.tar. 
 ```
+
+**sed** - Stream editor.
+- -E ~ Use extended RegEx
+- -n ~ Suppress output unless specified
+
+```
+sed [flags] [ADDRESS] COMMAND [OPTIONS]
+```
+
+- Pattern Space
+	- Changes whatever is passed to it
+	- Removes newlines
+	- Sends to Hold Space when completed
+
+- Hold Space
+
+- ADDRESS ~ Specify particular address to change. Not necessary.
+- COMMAND ~ What to change
+	- g/G ~ Copy/Append to pattern space from hold space
+	- h/H ~ Copy/Append to hold space from pattern space 
+- OPTIONS ~ Change how things are changed
+	- tba
+
+
+**mkfs** - Make File System. Formats partitions..
