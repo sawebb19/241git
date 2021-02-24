@@ -331,14 +331,15 @@ grep [FLAGS] PATTERN [FILE]
 - Normal Mode
 	- v ~ Select characters
 	- V ~ Select lines
-	- d ~ Cut
 	- y ~ Copy
-		- yy/Y ~ Copy current line with newline character
-		- y$ ~ Copy current line without newline character
-		- yw ~ Copy until start of next word
-		- yaw ~ Copy current word with whitespace
-		- yiw ~ Copy current word without whitespace
-		- yt# ~ Copy from cursor up to and excluding the next instance of the character #
-		- yf# ~ Copy from cursor up to and including the next instance of the character #
+	- d ~ Cut
+	- Shared Copy/Paste commands (replace x with y/d as needed)
+		- xx/X ~ Copy current line with newline character
+		- x$ ~ Copy to end of current line without newline character
+		- xw ~ Copy until start of next word
+		- xaw ~ Copy current word with whitespace
+		- xiw ~ Copy current word without whitespace
+		- xt# ~ Copy from cursor up to and excluding the next instance of the character #
+		- xf# ~ Copy from cursor up to and including the next instance of the character #
 	- p ~ Paste after cursor
 	- P ~ Paste before cursor
