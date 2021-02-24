@@ -127,30 +127,55 @@ chmod ###
 - -P ~ Never follow symbolic links (default)
 - -L ~ Follow symbolic links
 
-**df** - Disk Free. Shows how much space is filled on the disk
-- -h ~ Print sizes in powers of 1024
+**df** - Disk Free. Shows how much space is filled on the disk.
+`
+df [FLAGS] [FILE]
+`
+
+- -h ~ Print sizes in human readable format
 - -H - Print sizes in powers of 1000
 
-**du** - Disk usage. Shows how much space is filled in a particular directory
+**du** - Disk usage. Shows how much space is filled in a particular directory.
+`
+du [FLAGS] [FILE]
+`
+
 - -c ~ Produces grand total
 - -h ~ Makes it easier to read
 - --exclude=PATTERN ~ Excludes files that match PATTERN
 - -t=[-]SIZE ~ Excludes entries smaller than SIZE. Excludes entries larger than SIZE if `-` is entered before SIZE
 
 **more/less** - Displays the contents of a file.
+`
+less FILE
+`
+
 - Use `/` to enter search mode
 	- `n` ~ Next occurence
 	- `N` ~ Previous occurence
+
 **head/tail** - Displays the first/last part of the file. Defaults to 10 lines.
+`
+head/tail [FLAGS] [FILE]
+`
+
 - -n=[-]NUM ~ Displays first/last NUM lines. Displays all but last/first NUM lines if `-` is entered before NUM
 
 **wc** - Word Count. Prints newlines/word/byte counts for each fole passed to it.
+`
+wc [FLAGS] [FILE]
+`
+
 - -c ~ Prints byte counts
 - -m ~ Prints character counts
 - -l ~ Prints newline counts
 - -w ~ Prints word counts
 
-**sort** - Sort. Sorts lines of text files
+**sort** - Sort. Sorts lines of text files.
+`
+sort [FLAGS] [FILE]
+`
+
 - -f ~ Ignores case
 - -d ~ Consider olnly blanks and alphanumeric characters
 - -b ~ Ignore leading blanks
@@ -160,6 +185,10 @@ chmod ###
 - --output=FILE ~ Output to a file defined by FILE
 
 **uniq** - Unique. Report or omit repeated lines adjacent.
+`
+uniq [FLAGS] [FILE]
+`
+
 - -c ~ Counts number of occurences of each line.
 - -d ~ Only print the lines that have duplicates (opposite of -u)
 - -D ~ Only print the lines that have duplicates and all of its duplicates.
@@ -171,12 +200,19 @@ chmod ###
 - --check-chars=N ~ Only compare the first N chars in each line only
 
 **wget/curl** - Both can download stuff from servers. Curl can do more and has more supported protocols. Idk enough to say tho
+`
+wget/curl [FLAGS] [URL]
+`
 
 **rlwrap** - Readline Wrap. Run commands with readline line editing.
 
 **uname** - Prints system information
+`
+uname [FLAGS]
+`
+
 - -a ~ All following flags
-- -s ~ Prints kernel name
+- -s ~ Prints kernel name. Used if no flags are given.
 - -r ~ Prints kernel release
 - -v ~ Prints kernel version
 - -m ~ Prints machine hardware name
@@ -190,29 +226,20 @@ chmod ###
 - git commit -m "[MESSAGE]" ~ Commits changes with message (removes need to enter Vim/Nano to make commit message)
 
 **cat** - Concatenate. Concatentaes files and displays them.
-
-```
-cat README.md
-
-> Samuel Webb
-
----
-
-"Life is..."
-
-cat bashms.sh README.md
-
-> echo $1 | write $2
-Samuel Webb
-
----
-
-"Life is..."
-```
+`
+cat FILE1 [FILE2]
+`
 
 **bat** - Bat. Cat but with some extra features. See above for examples. Not in EOS.
+`
+bat FILE
+`
 
 **tar** - Tape Archive. Manipulates tar files.
+`
+tar [FLAGS] [NAME] [FILE1] {FILE2]
+`
+
 - -c ~ Creates tar file
 - -A ~ Append tar files together
 - --delete ~ Delete from archive
@@ -234,12 +261,12 @@ Extract all files from archive.tar.
 ```
 
 **sed** - Stream editor.
-- -E ~ Use extended RegEx
-- -n ~ Suppress output unless specified
-
 ```
 sed [flags] [ADDRESS] COMMAND [OPTIONS]
 ```
+
+- -E ~ Use extended RegEx
+- -n ~ Suppress output unless specified
 
 - Pattern Space
 	- Changes whatever is passed to it
@@ -256,4 +283,45 @@ sed [flags] [ADDRESS] COMMAND [OPTIONS]
 	- tba
 
 
-**mkfs** - Make File System. Formats partitions..
+**mkfs** - Make File System. Formats partitions.
+`
+mkfs [FLAGS] DEVICE [SIZE]
+`
+
+- -t ~ File system type
+- -V ~ Verbose/Version. Produces verbose output (will display version info if only flag)
+- -h ~ Help.
+
+**chroot** - Change root.
+`
+chroot [FLAGS] NEWROOT [COMANND]
+`
+
+**grep** - Global Regular Expression Print. Matches RegEx against text.
+`
+grep [FLAGS] PATTERN [FILE]
+`
+
+- -E ~ Extended RegEx
+- -G ~ Basic RegEx. Default.
+- -i ~ Ignore case
+- -v ~ Search for non-matching lines
+- -x ~ Select matches that match the whole line
+- -c ~ Count number of matching lines
+- --color ~ Displays matches and other useful info in color
+- -L ~ Print files which did not contain a match
+- -l ~ Print files which contained a match
+- -m NUM ~ Stop reading after NUM matches
+- -o ~ Only print the matches, not the rest of the line
+- -q ~ Don't output anything
+- -s ~ Suppress error messages
+- -H ~ Print filesname with each match
+- -n ~ Print line number with each match
+- -A NUM ~ Print NUM lines after each match
+- -B NUM ~ Print NUM lines before each match
+- --exclude=GLOB ~ Exclude files whose name matches GLOB
+- --exclude-dir=DIR ~ Exclude directories whose name matches DIR
+- --include=GLOB ~ Include files whose name matches GLOB
+- -r ~ Read all files under each directory recursively
+- -R ~ `-r` but also follow symbolic links
+
