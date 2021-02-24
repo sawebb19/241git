@@ -325,3 +325,20 @@ grep [FLAGS] PATTERN [FILE]
 - -r ~ Read all files under each directory recursively
 - -R ~ `-r` but also follow symbolic links
 
+
+**vim** - Vim.
+
+- Normal Mode
+	- v ~ Select characters
+	- V ~ Select lines
+	- d ~ Cut
+	- y ~ Copy
+		- yy/Y ~ Copy current line with newline character
+		- y$ ~ Copy current line without newline character
+		- yw ~ Copy until start of next word
+		- yaw ~ Copy current word with whitespace
+		- yiw ~ Copy current word without whitespace
+		- yt# ~ Copy from cursor up to and excluding the next instance of the character #
+		- yf# ~ Copy from cursor up to and including the next instance of the character #
+	- p ~ Paste after cursor
+	- P ~ Paste before cursor
