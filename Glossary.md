@@ -260,13 +260,14 @@ tar -xf archive.tar
 Extract all files from archive.tar. 
 ```
 
-**sed** - Stream editor.
-```
-sed [flags] [ADDRESS] COMMAND [OPTIONS]
-```
+**sed** - Stream editor. Takes each line and edits in Pattern Space.
+`
+sed [FLAGS] [ADDRESS] COMMAND [OPTIONS]
+`
 
 - -E ~ Use extended RegEx
 - -n ~ Suppress output unless specified
+
 
 - Pattern Space
 	- Changes whatever is passed to it
@@ -274,14 +275,21 @@ sed [flags] [ADDRESS] COMMAND [OPTIONS]
 	- Sends to Hold Space when completed
 
 - Hold Space
+	- Buffer for lines that are done being edited
+	- Lines can be moved to and from
 
 - ADDRESS ~ Specify particular address to change. Not necessary.
-- COMMAND ~ What to change
+
+- COMMAND ~ What to do
 	- g/G ~ Copy/Append to pattern space from hold space
 	- h/H ~ Copy/Append to hold space from pattern space 
-- OPTIONS ~ Change how things are changed
-	- tba
+	- p ~ Print
+	- d ~ Delete
+	- s ~ Swap
+	- ; ~ Can separate each command with semicolon
 
+- OPTIONS ~ Change how things are changed
+	- g ~ Use command on all matches on each line, not the first
 
 **mkfs** - Make File System. Formats partitions.
 `
