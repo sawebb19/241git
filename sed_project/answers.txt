@@ -5,3 +5,6 @@ sed -E '/^[^#.*define]/d' limits.h
 sed -i.ORIG 's|gattaca|@@GREATMOVIE@@|g' dna.txte
 sed -f scriptFile message
 tac lyrics | sed -n '1,50p'
+
+# "sed -E '/<script.*>/,/<\/script>/d' faculty" might be necessary if we're deleting the '<script type=...>'
+# and everything in between them 
