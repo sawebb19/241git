@@ -230,6 +230,8 @@ uname [FLAGS]
 cat FILE1 [FILE2]
 `
 
+**tac** - Cat, but prints files in reverse. See above for details.
+
 **bat** - Bat. Cat but with some extra features. See above for examples. Not in EOS.
 `
 bat FILE

@@ -18,9 +18,9 @@ Samuel Webb
 
 **CommitMachine.sh MESSAGE** - Commits my 241git repo with commit message MESSAGE.
 
-**bashms.sh [MESSAGE] [USER]** - Sends MESSAGE to USER via bash. Inspired by Prof. Woodring.
+**bashms.sh MESSAGE USER** - Sends MESSAGE to USER via bash. Inspired by Prof. Woodring.
 
-**makeProject.sh [NAME]** - Makes C project with name NAME.
+**makeProject.sh NAME** - Makes C project with name NAME.
 
 **Glossary.md** - Glossary of unix/bash commands and how to use them. Includes flags and examples.
 

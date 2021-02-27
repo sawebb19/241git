@@ -2,15 +2,6 @@
 
 <!-- GVSU Web Header Banner - Version 1.2, June 2018 -->
 
-	var search = false;
-	(function(g,v,s,u)
-		{s=g.createElement('script');
-		s.async = true;
-		s.src = 'https://www.gvsu.edu/includes/topbanner/external.js?search='+(v===true?'1':'0');
-		u = g.getElementsByTagName('script')[0];
-		u.parentNode.insertBefore(s,u)})(document, search);
-</script>
-
 <html lang="en-US">
 <head>
 	<meta charset="UTF-8" />
@@ -21,8 +12,6 @@
 		document.documentElement.className = 'js';
 	</script>
 
-	var et_site_url='https://www.cis.gvsu.edu';var et_post_id='1220';function et_core_page_resource_fallback(a,b){"undefined"===typeof b&&(b=a.sheet.cssRules&&0===a.sheet.cssRules.length);b&&(a.onerror=null,a.onload=null,a.href?a.href=et_site_url+"/?et_core_page_resource="+a.id+et_post_id:a.src&&(a.src=et_site_url+"/?et_core_page_resource="+a.id+et_post_id))}
-</script><title>Faculty | GVSU School of Computing and Information Systems</title>
 <link rel='dns-prefetch' href='//fonts.googleapis.com' />
 <link rel='dns-prefetch' href='//s.w.org' />
 <link rel="alternate" type="application/rss+xml" title="GVSU School of Computing and Information Systems &raquo; Feed" href="https://www.cis.gvsu.edu/feed/" />
@@ -1060,12 +1049,6 @@ a[role="tab"].keyboard-outline {
 	</script>
 
 <div id='fb-root'></div>
-  (function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    js = d.createElement(s); js.id = id;
-    js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js#xfbml=1&version=v2.12&autoLogAppEvents=1';
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));</script>
   <div class='fb-customerchat'
     attribution="wordpress"
     page_id='129211756043'

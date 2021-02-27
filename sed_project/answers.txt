@@ -1,2 +1,7 @@
-sed 's/humor/humour/g;s/color/colour/g;s/honor/honour/g;s/behavior/behaviour/g'  american-english > ~/lazy/sed_project/new_dict.txt
+sed 's/humor/humour/g;s/color/colour/g;s/honor/honour/g;s/behavior/behaviour/g'  american-english
 sed 's/FOOPS/if/g;s/BEEPBOOP/\/**/g' MyFile.c
+sed -E '/<script>/,/<\/script>/d' faculty
+sed -E '/^[^#.*define]/d' limits.h
+sed -i.ORIG 's|gattaca|@@GREATMOVIE@@|g' dna.txte
+sed -f scriptFile message
+tac lyrics | sed -n '1,50p'
