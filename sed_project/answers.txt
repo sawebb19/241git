@@ -1,0 +1,2 @@
+sed 's/humor/humour/g;s/color/colour/g;s/honor/honour/g;s/behavior/behaviour/g'  american-english > ~/lazy/sed_project/new_dict.txt
+sed 's/FOOPS/if/g;s/BEEPBOOP/\/**/g' MyFile.c
