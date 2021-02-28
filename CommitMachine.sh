@@ -1,3 +1,3 @@
 git add -A
 git commit -m "$1"
-git push >> commit.log
+git push -q
