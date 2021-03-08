@@ -344,12 +344,28 @@ grep [FLAGS] PATTERN [FILE]
 	- y ~ Copy
 	- d ~ Cut
 	- Shared Copy/Paste commands (replace x with y/d as needed)
-		- xx/X ~ Copy current line with newline character
-		- x$ ~ Copy to end of current line without newline character
-		- xw ~ Copy until start of next word
-		- xaw ~ Copy current word with whitespace
-		- xiw ~ Copy current word without whitespace
-		- xt# ~ Copy from cursor up to and excluding the next instance of the character #
-		- xf# ~ Copy from cursor up to and including the next instance of the character #
+		- xx/X ~ X current line with newline character
+		- x$ ~ X to end of current line without newline character
+		- xw ~ X until start of next word
+		- xaw ~ X current word with whitespace
+		- xiw ~ X current word without whitespace
+		- xt# ~ X from cursor up to and excluding the next instance of the character #
+		- xf# ~ X from cursor up to and including the next instance of the character #
 	- p ~ Paste after cursor
 	- P ~ Paste before cursor
+
+**awk** - Awk. Text and data processor.
+`
+awk [FLAGS] [SCRIPT_FILE] COMMAND FILE
+`
+
+- -f ~ Use SCRIPT_FILE in combination wih COMMAND
+
+- NOTES
+	- BEGIN{...} ~ Command(s) used before eveything runs
+	- END{...} ~ Command(s) used after everything else
+	- FS='...' ~ Change delimeter in input
+	- OFS='...' ~ Change delimeter in output
+	- Can define variables within SCRIPT_FILE
+
+**tr** - Trim(?). Deletes characters from a string.

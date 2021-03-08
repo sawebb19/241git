@@ -16,13 +16,19 @@ Samuel Webb
 
 ## FILES
 
-**CommitMachine.sh MESSAGE** - Commits my 241git repo with commit message MESSAGE.
+**projects** - Stuff I made  for practice/fun
 
-**bashms.sh MESSAGE USER** - Sends MESSAGE to USER via bash. Inspired by Prof. Woodring.
+- *CommitMachine.sh MESSAGE* - Commits my 241git repo with commit message MESSAGE.
 
-**makeProject.sh NAME** - Makes C project with name NAME.
+- *bashms.sh MESSAGE USER* - Sends MESSAGE to USER via bash. Inspired by Prof. Woodring.
 
-**Glossary.md** - Glossary of unix/bash commands and how to use them. Includes flags and examples.
+- *nowPlaying.sh* - Gives current song being played on my Spotify account. Broken.
+
+- *C.md* - Glossary for C
+
+*makeProject.sh NAME* - Makes C project with name NAME.
+
+*Glossary.md* - Glossary of unix/bash commands and how to use them. Includes flags and examples.
 
 **sed_project** - Directory for Feb. 26 sed project.
 
