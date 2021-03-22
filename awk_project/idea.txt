@@ -1,0 +1,6 @@
+1.) Sort by %5
+2.) Add all of %6-%12, and divide by the last %1 (or line count as given by wc)
+3.) Sort by %3 then by %5, then delete all entries following the first of each type
+4.) Sort by %3, add all of %6-%12 for each type, then divide by the number of Pokemon in each type (?)
+5.) "The strongest (Sp.) Attack Pokemon vs the weakest (Sp.) Defense Pokemon respectively"
+    Sort by %7, take first entry, sort by %8, take last entry and print both. Sort by %9 and take first entry, sort by %10, take last entry and print both. 
