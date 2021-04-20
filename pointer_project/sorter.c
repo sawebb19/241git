@@ -4,26 +4,31 @@
 
 void sort(char** contents, int size){
 	
-//	printf("\n");	
+	// Count the number of lines	
 	int numlines = 0;
 
 	for(int i = 0; i<size; ++i){
 		if((*contents)[i] == '\n')
 			++numlines;
 	}
-	printf("%i\n",numlines);
+
+	printf("Found %d words.\n",numlines);
+	
+	// Make an array of tokenized strings for each line/word
+	// which we can use to compare with each other
 	char** words = malloc(numlines*sizeof(char*));
+	int wc = 0;
 	char* word = strtok(*contents, "\n"); 
-	int wc = 1;
-	words[0] = word;
 	while(word != NULL){
-		word = strtok(NULL, "\n");
-		words[wc] = word;
 		if(word != NULL){
+			words[wc] = word;
 			++wc;
+			printf("%s\n",word);
 		}
+		word = strtok(NULL, "\n");
 	}
-	printf("%s\n%s\n",words[0],words[4]);	
+
+	// Use Insertion Sort to sort the given list
 	char* temp;
 	int comp;
 
@@ -37,14 +42,25 @@ void sort(char** contents, int size){
 			}
 		}
 	}
-	
+
 	for(int i = 0; i < numlines; ++i){
 		printf("%s\n",words[i]);
 	}
-
-
-	contents = words;
 	
+	//printf("You are here\n");
+
+	*contents = malloc(numlines*sizeof(char*));
+	for(int i = 0; i < numlines; ++i){
+		contents[i] = words[i];
+	}
+	
+//	*contents = *words;
+	printf("WORDS:\n");
+	for(int i = 0; i < numlines; ++i){
+		printf("%s\n",contents[i]);
+	}
+
+
 	free(words);
- 
+	printf("Sort done!\n"); 
 }
