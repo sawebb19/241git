@@ -4,7 +4,9 @@
 
 void sort(char** contents, int size){
 	
-	// Count the number of lines	
+	// Count the number of lines in the file by counting
+	// the number of newlines
+	
 	int numlines = 0;
 
 	for(int i = 0; i<size; ++i){
@@ -12,10 +14,11 @@ void sort(char** contents, int size){
 			++numlines;
 	}
 
-	printf("Found %d words.\n",numlines);
+	printf("Found %d words:\n\n",numlines);
 	
 	// Make an array of tokenized strings for each line/word
-	// which we can use to compare with each other
+	// which we can use to compare to each other for sorting
+
 	char** words = malloc(numlines*sizeof(char*));
 	int wc = 0;
 	char* word = strtok(*contents, "\n"); 
@@ -23,12 +26,14 @@ void sort(char** contents, int size){
 		if(word != NULL){
 			words[wc] = word;
 			++wc;
-			printf("%s\n",word);
 		}
 		word = strtok(NULL, "\n");
 	}
 
 	// Use Insertion Sort to sort the given list
+	// If it seems like it hanged, it didn't, it
+	// just takes a very long time
+
 	char* temp;
 	int comp;
 
@@ -43,24 +48,22 @@ void sort(char** contents, int size){
 		}
 	}
 
+	
 	for(int i = 0; i < numlines; ++i){
 		printf("%s\n",words[i]);
 	}
-	
-	//printf("You are here\n");
 
-	*contents = malloc(numlines*sizeof(char*));
-	for(int i = 0; i < numlines; ++i){
-		contents[i] = words[i];
+	// Store our sorted file into contents so that
+	// it can be saved to a file
+
+	*contents = malloc(size);
+	for(int i = 0; i<size; ++i){
+		(*contents)[i] = (*words)[i];
+		if((*words)[i] == '\0'){
+			(*contents)[i] = '\n';
+		}
 	}
 	
-//	*contents = *words;
-	printf("WORDS:\n");
-	for(int i = 0; i < numlines; ++i){
-		printf("%s\n",contents[i]);
-	}
-
-
+	// Free up memory after malloc-ing
 	free(words);
-	printf("Sort done!\n"); 
 }
