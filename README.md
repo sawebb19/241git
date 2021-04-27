@@ -24,8 +24,6 @@ Samuel Webb
 
 - *nowPlaying.sh* - Gives current song being played on my Spotify account. Broken.
 
-- *C.md* - Glossary for C
-
 *makeProject.sh NAME* - Makes C project with name NAME.
 
 *Glossary.md* - Glossary of unix/bash commands and how to use them. Includes flags and examples.
@@ -37,6 +35,10 @@ Samuel Webb
 **cPractice** - Directory for Mar. 17 C programming practice.
 
 **pointer_project** - Directory for Apr. 19 C pointer preoject.
+
+**lldb** - Directory for in-class debugger assignment.
+
+**final** - Directory for final exam.
 
 ---
 
